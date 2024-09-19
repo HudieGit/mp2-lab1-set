@@ -308,4 +308,12 @@ TEST(TBitField, bitfields_with_different_bits_are_not_equal)
   bf2.SetBit(2);
 
   EXPECT_NE(bf1, bf2);
+
+}
+//сделал тест по проверке ...
+TEST(TBitField, accurate_border_check) {
+
+    const int size = 2;
+    TBitField bf1(size);
+    ASSERT_ANY_THROW(bf1.SetBit(size));
 }
